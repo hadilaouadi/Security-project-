@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortunePass - Password Strength Tester</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FortunePass</h1>
+            <p class="subtitle">Reveal your password's destiny with ancient wisdom</p>
+        </header>
+        
+        <div class="password-container">
+            <input type="password" id="passwordInput" placeholder="Enter your password...">
+            <button id="toggleVisibility">👁️</button>
+        </div>
+        
+        <div class="controls">
+            <label class="switch">
+                <input type="checkbox" id="ttsToggle">
+                <span class="slider round"></span>
+                <span class="label-text">Voice Guidance</span>
+            </label>
+        </div>
+        
+        <div class="card-display" id="cardDisplay">
+            <div class="card-placeholder">
+                <p>Your password's fortune awaits...</p>
+            </div>
+            <div class="card hidden" id="tarotCard">
+                <img id="cardImage" src="assets/images/back.png" alt="Tarot Card">
+                <div class="card-content">
+                    <h2 id="cardName">The Star</h2>
+                    <p id="cardMessage">The stars align in your favor!</p>
+                    <p class="interpretation" id="cardInterpretation">.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="suggestions hidden" id="suggestions">
+            <h3>How to strengthen your password:</h3>
+            <ul id="suggestionList"></ul>
+        </div>
+        
+        <div class="validation-details hidden" id="validationDetails">
+            <h3>Technical Validation:</h3>
+            <ul id="validationList"></ul>
+        </div>
+    </div>
+    
+    <audio id="ttsPlayer"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
